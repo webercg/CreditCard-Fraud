@@ -35,21 +35,21 @@ Obter um modelo com alta revocação e alta precisão para classificação de tr
 
 ## 4.1 Em que hora do dia há maior ocorrência de transações? e transações fraudulentas?
     Observa-se que as transaçõs comuns tem um padrão:
-    * Atingem o mínimo por volta das 04h da madrugada e crescem até atingir o pico ás 09h da manhã que se mantém até as 21h quando começa a cair o número de transações.
+    - Atingem o mínimo por volta das 04h da madrugada e crescem até atingir o pico ás 09h da manhã que se mantém até as 21h quando começa a cair o número de transações.
     
     As transações fraudulentas não possui um padrão de distribuição, no entanto, é possível verificar que ocorrem majoritariamente em 2 períodos:
 
-    * As 03h da madrugada, quando não há muitas transações comuns ocorrendo.
-    * As 11h da manhã. Embora seja um horário com alto número de transações comuns, é bastante anormal a queda do número de transações fraudulentas nos horários subjacentes 10h e 12h. 
+    - As 03h da madrugada, quando não há muitas transações comuns ocorrendo.
+    - As 11h da manhã. Embora seja um horário com alto número de transações comuns, é bastante anormal a queda do número de transações fraudulentas nos horários subjacentes 10h e 12h. 
     
 ## 4.2 Há alguma tendência no valor médio das transações fraudulentas de acordo com o horário do dia?
-    * As transações comuns possuem uma média estável e inferior comparada as transações fraudulentas que possuem médias altas e com alto desvio padrão.
+    - As transações comuns possuem uma média estável e inferior comparada as transações fraudulentas que possuem médias altas e com alto desvio padrão.
 
-    * É possível observar um pico nos valores das transações fraudulentasas 0h e as 10h, mas isso pode ser efeito da alta variância dessas observações.
+    - É possível observar um pico nos valores das transações fraudulentasas 0h e as 10h, mas isso pode ser efeito da alta variância dessas observações.
 
 ## 4.3 Quantas transações fraudulentas foram registradas? e quantas transações comuns?
 
-     * Os dados são altamente desbalanceados, a base possui 284315 registros comuns e 492 registros de fraudes. Será necessário aplicar técnicas para o balanceamento.
+     - Os dados são altamente desbalanceados, a base possui 284315 registros comuns e 492 registros de fraudes. Será necessário aplicar técnicas para o balanceamento.
 
 ## 4.4 Como estão distribuidos os dados de cada variável?
    
