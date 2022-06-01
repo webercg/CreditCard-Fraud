@@ -25,9 +25,9 @@ Obter um modelo com alta revocação e alta precisão para classificação de tr
 
 - Experimentos iniciais com LazyPredictor para pré-seleção 5 modelos com maiores AUC (Área sobre a curva (FP vs TP). LGBMClassifier, XGBClassifier, RandomForestClassifier, DecisionTreeClassifier e LinearSVC.
 
-- Para cada modelo realizou-se diversos variando-se o fator de balanceamento dos dados que seriam alimentados ao modelo avaliando-se a AUC. O fator de balaceamento foi determinado a partir da maximização da métrica AUC.
+- Para cada modelo realizou-se diversos variando-se o fator de balanceamento dos dados que seriam alimentados ao modelo avaliando-se a AUC. O fator de balaceamento foi determinado a partir da maximização da métrica AUC. Uma vez determinado o fator de balanceamento os dados foram separados em dados de treino e teste.
 
-- Para cada modelo e fator de balanceamento foi realizado experimentos para determinar os melhores hyperparâmetros. A função de refit foi a revocação para classe 1 (recall 1). Foram selecionados os 3 melhores conjuntos de hiperparâmetros que maximizavam a AUC. Por fim, um único modelo foi selecionado a partir de validação estatística por meio de teste de hipoteses entre os modelos.
+- Para cada modelo e fator de balanceamento foi realizado experimentos para determinar os melhores hyperparâmetros. A métrica utilizada para retorno dos melhores hyperparâmetros foi a revocação para classe 1 (recall 1), contudo,  foram selecionados os 3 melhores conjuntos de hiperparâmetros que maximizavam a AUC. Por fim, um único modelo foi selecionado a partir de validação estatística por meio de teste de hipoteses entre os 3 conjuntos candidatos.
  
 - Ao final das experimentações haviam 5 modelos tunados. Um único modelo foi selecionado validando-o estatisticamente a superioridade do modelo via testes de hipoteses.
 
@@ -56,7 +56,14 @@ Obter um modelo com alta revocação e alta precisão para classificação de tr
    Nenhuma variável apresentou distribuição normal, foi aplicado logarítmo na variável "Amount" que corresponde ao valor da transação a fim de normalizá-la e aumentar a performance dos algorítmos de Machine Learning
 
 # Resultados Machine Learning
-  5 Modelos foram selecionados LGBMClassifier, XGBClassifier, RandomForestClassifier, DecisionTreeClassifier e LinearSVC. Sendo o modelo LGBMClassifier eleito como preditor.
+  5 Modelos foram selecionados:
+  - LGBMClassifier
+  - XGBClassifier, 
+  - RandomForestClassifier, 
+  - DecisionTreeClassifier
+  - LinearSVC. 
+  
+  O modelo LGBMClassifier eleito como preditor e apresenta as seguinte performance nos dados de teste:
   
   Revocação classe 1 - Fraudes: 96,13%
   Revocação classe 0 - Transações comuns: 98,33%
