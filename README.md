@@ -26,9 +26,9 @@ Obter um modelo com alta revocação e alta precisão para classificação de tr
 - Experimentos iniciais com LazyPredictor para pré-seleção 5 modelos com maiores AUC (Área sobre a curva (FP vs TP). LGBMClassifier, XGBClassifier, RandomForestClassifier, DecisionTreeClassifier e LinearSVC.
 
 - Para cada modelo realizou-se diversos variando-se o fator de balanceamento dos dados que seriam alimentados ao modelo avaliando-se a AUC. O fator de balaceamento foi determinado a partir da maximização da métrica AUC.
-- 
+
 - Para cada modelo e fator de balanceamento foi realizado experimentos para determinar os melhores hyperparâmetros. A função de refit foi a revocação para classe 1 (recall 1). Foram selecionados os 3 melhores conjuntos de hiperparâmetros que maximizavam a AUC. Por fim, um único modelo foi selecionado a partir de validação estatística por meio de teste de hipoteses entre os modelos.
-- 
+ 
 - Ao final das experimentações haviam 5 modelos tunados. Um único modelo foi selecionado validando-o estatisticamente a superioridade do modelo via testes de hipoteses.
 
 # 4 Resultados Análise Exploratória de Dados
