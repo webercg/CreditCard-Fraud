@@ -19,6 +19,8 @@ O objetivo desse projeto é criar um modelo que seja capaz de identificar corret
 
 Obter um modelo com alta revocação e alta precisão para classificação de transações fraudulentas, portanto, é fundamental.
 
+# Em andamento: Construção arquitetura (Kafka - streaming de dados) para consumo do modelo simulando uma transação real.
+
 # 3 Metodologia
 
 - Uma analise exploratória dos dados foi conduzida no próprio notebook para traçar o perfil das transações fraudulentas.
@@ -74,4 +76,8 @@ Obter um modelo com alta revocação e alta precisão para classificação de tr
 # GAP e possíveis melhorias
 
 
--
+- Há poucos exemplos de transações fraudulentas (492), embora tenha-se validado as métricas com os dados de treino, é possível que ao colocar o modelo em produção haja uma queda na revocação sendo necessário o retreinamento com novos exemplos de transações fraudulentas. 
+
+- Além disso, o dataset utilizado provém de uma coleta em 48h e não há mais informações sobre os dias em que foram coletados, pode ocorrer uma mudança de comportamento nas transações fraudulentas de acordo com o período do ano (Natal, Carnaval etc) ou com o dia da semana (Finais de Semana e Feriados prolongados). Dessa forma, pode ser necessário retreinar o modelo para contabilizar comportamentos atipicos possívelmente não considerados.
+
+
